@@ -17,6 +17,7 @@ class TicTacToeBoard(tk.Tk):
         display_frame.pack(fill=tk.X)
         self.display = tk.Label(
             master=display_frame,
+            fg="darkkhaki",
             text="Ready?",
             font=font.Font(size=28, weight="bold"),
         )
@@ -71,7 +72,7 @@ class TicTacToeBoard(tk.Tk):
         clicked_button.config(text=self._game.current_player.label)
         clicked_button.config(fg=self._game.current_player.color)
     
-    def _update_display(self, msg, color="black"):
+    def _update_display(self, msg, color="darkkhaki"):
         self.display["text"] = msg
         self.display["fg"] = color
 
